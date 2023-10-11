@@ -49,25 +49,9 @@
     <!--全站jquery-->
     <script src="https://bulianglin.com/usr/themes/handsome/assets/libs/jquery/jquery.min.js"></script>
 
-<div class="entry-content l-h-2x">
-    <p>
-        <a href="https://bulianglin.com/g/aHR0cHM6Ly95b3V0dS5iZS9yMld1bkV5cU1lUQ" target="_blank">
-            观看视频使用教程>>
-        </a>
-        <br>
-            <a href="https://bulianglin.com/g/L2FyY2hpdmVzL25vZGVzY2F0Y2guaHRtbA" target="_blank">
-                配合测速工具使用更佳>>
-            </a>
-            <br/>
-        </br>
-    </p>
-    <div class="tip inlineBlock info">
-        如果网页未按预期执行，建议刷新网页重试
-    </div>
-    <p>
-    </p>
-    <script type="text/jscript">
-        var ipv4 = {
+          <div class="entry-content l-h-2x">
+          <p><a href="https://bulianglin.com/g/aHR0cHM6Ly95b3V0dS5iZS9yMld1bkV5cU1lUQ" target="_blank" >观看视频使用教程&gt;&gt;</a><br><a href="https://bulianglin.com/g/L2FyY2hpdmVzL25vZGVzY2F0Y2guaHRtbA" target="_blank" >配合测速工具使用更佳&gt;&gt;</a><br><div class="tip inlineBlock info">如果网页未按预期执行，建议刷新网页重试</div></p><script type="text/jscript">
+var ipv4 = {
     random: function(subnet, mask) {
         let randomIp = Math.floor(Math.random() * Math.pow(2, 32 - mask)) + 1;
 
@@ -201,59 +185,22 @@ function cleantext() {
     $("#err").html("");
     $("#out").html("");
 }
-    </script>
-    <div id="err" style="color:red; height: 25px;">
-        仅支持vmess、vless和trojan的节点分享链接！
-    </div>
-    <div>
-        原始节点：
-        <br>
-            <textarea id="in" rows="6" style="width: 100%;">
-            </textarea>
-        </br>
-    </div>
-    <div id="customview" style="display: none; width: 100%;">
-        CDN IP列表：
-        <br>
-            <textarea id="cdniplist" rows="6" style="width: 100%;">
-            </textarea>
-        </br>
-    </div>
-    CDN提供商：
-    <select id="cdntype" onchange="isCustom()">
-        <option value="cf">
-            cloudflare
-        </option>
-        <option value="cft">
-            cloudfront
-        </option>
-        <option value="gcore">
-            Gcore
-        </option>
-        <option value="custom">
-            自定义
-        </option>
-    </select>
-    获取方式：
-    <select id="getmethod">
-        <option value="queue">
-            顺序
-        </option>
-        <option value="random">
-            随机
-        </option>
-    </select>
-    获取节点数：
-    <input id="num" name="num" style="width: 58px;" value="1000">
-        <button class="btn m-b-xs btn-info btn-rounded" onclick="exec()" onmousedown="cleantext()">
-            ↓点击提取节点↓
-        </button>
-        <div>
-            节点列表：
-            <br>
-                <textarea id="out" readonly="readonly" rows="15" style="width: 100%;">
-                </textarea>
-            </br>
-        </div>
-    </input>
-</div>
+</script>
+
+<div id="err" style="color:red; height: 25px;"></div>
+<div>原始节点：<br/><textarea id="in" rows="6" style="width: 100%;"></textarea></div>
+
+<div id="customview"  style="display: none; width: 100%;">CDN IP列表：<br/><textarea id="cdniplist" rows="6" style="width: 100%;"></textarea></div>
+CDN提供商：<select id="cdntype" onchange="isCustom()">
+  <option value ="cf">cloudflare</option>
+  <option value ="cft">cloudfront</option>
+  <option value ="gcore">Gcore</option>
+  <option value ="custom">自定义</option>
+</select> 
+获取方式：<select id="getmethod">
+  <option value ="queue">顺序</option>
+  <option value ="random">随机</option>
+</select> 
+获取节点数：<input id="num" name="num" value="1000" style="width: 58px;">
+<button class="btn m-b-xs btn-info btn-rounded" onclick="exec()" onmousedown="cleantext()">↓点击提取节点↓</button>
+<div>节点列表：<br/><textarea id="out" rows="15" style="width: 100%;" readonly="readonly"></textarea></div>          </div>
